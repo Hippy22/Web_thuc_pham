@@ -1,0 +1,71 @@
+body .titles h2 {
+    font-size: 46px;
+    font-weight: 700;
+}
+
+body .titles a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+body .title h2 {
+    color: #2E2E2E;
+    text-align: center;
+    margin-top: 20px;
+}
+
+body .title p {
+    color: #4D4D4D;
+    width: 40%;
+}
+
+body section .row {
+    padding: 50px 0;
+}
+
+body section .row h2 {
+    text-align: center;
+}
+
+body section .row h6 {
+    padding: 10px 0;
+}
+
+body section .row .icon-about i {
+    font-size: 40px;
+    color: #FE6A6A;
+}
+
+body section .row .icon-about p {
+    font-size: 14px;
+}
+
+body section .row .content-about .content h2 {
+    font-size: 25px;
+}
+
+body section .row .content-about .content h2 span {
+    font-size: 16px;
+    letter-spacing: 5px;
+    font-weight: normal;
+}
+
+body section .row .content-about .content p {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+
+@media all and (max-width:800px) {
+    .row .content-about {
+        width: auto;
+    }
+    .icon-about i{
+        font-size: 30px !important;
+    }
+    .row .img-about {
+        order: 3;
+        width: auto;
+    }
+}

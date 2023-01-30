@@ -1,0 +1,30 @@
+.footer {
+  padding-top: 50px;
+  background-color: #f55253;
+  color: white;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer p {
+  color: white;
+}
+
+.footer .col-md-4 p {
+  width: 50%;
+  margin-top: 20px;
+}
+
+.footer .author div span {
+  margin-left: 20px;
+}
+
+@media all and (max-width: 970px) {
+  .col-md-2 {
+    width: 25% !important;
+  }
+
+}
