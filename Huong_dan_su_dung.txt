@@ -1,0 +1,4 @@
+B1: Mở Terminal lên
+B2: Gõ lệnh "cd web-thucpham" vào Terminal
+B3: Gõ lệnh npm start
+B4: Enjoy <333
