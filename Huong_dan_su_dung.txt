@@ -2,3 +2,7 @@ B1: Mở Terminal lên
 B2: Gõ lệnh "cd web-thucpham" vào Terminal
 B3: Gõ lệnh npm start
 B4: Enjoy <333
+<Lưu ý>
+- Nếu bạn gặp lỗi "'react-scripts' is not recognized as an internal or external command" thì hãy khắc phục như sau:
+- Chạy câu lệnh "npm install react-scripts --save" trong Terminal rồi chạy lại các bước trên.
+Enjoy again :3 <333
