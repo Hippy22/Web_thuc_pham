@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ShopDetail.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -21,11 +21,20 @@ function ProductLastest(props) {
 function ChangeImage() {
     var logo = document.getElementById('imgaa');
     logo.src = "image/pd-1.jpg";
-
-
 }
+
 function Shop_detail(props) {
-    document.title="Shop Detail";
+    document.title = "Shop Detail";
+
+    const [count, setCount] = useState(1);
+    const handleClick = () => {
+        if (count >= 1) {
+            setCount(count - 1);
+        }
+    }
+    const handleClick2 = () => {
+        setCount(count + 1);
+    }
     return (
         <section className="container">
             <div className="row">
@@ -83,9 +92,9 @@ function Shop_detail(props) {
                             quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p>
                         <div className="list-btn d-flex">
                             <div className="input-group ">
-                                <button className="btn btn-outline-secondary tru shadow-none p-3 w-25" type="button" id="moins" onclick="minus()">-</button>
-                                <input type="text" className="form-control text-center p-3" defaultValue={1} id="count" />
-                                <button className="btn btn-outline-secondary cong shadow-none p-3 w-25" type="button" id="plus" onclick="plus()">+</button>
+                                <button className="btn btn-outline-secondary tru shadow-none p-3 w-25" type="button" onClick={handleClick}>-</button>
+                                <input type="text" className="form-control text-center p-3" id="count" value={count} />
+                                <button className="btn btn-outline-secondary cong shadow-none p-3 w-25" type="button" onClick={handleClick2}>+</button>
                             </div>
                             <a href="/" className="cart d-flex align-items-center"><b>ADD TO CARD </b></a>
                             <a href="/"><i className="fa-regular fa-heart" /></a>

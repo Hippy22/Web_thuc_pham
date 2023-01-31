@@ -1,8 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Cart.css';
 
+
+
+function Product(props) {
+    const [count, setCount] = useState(1);
+    const handleClick = () => {
+        if (count >= 1) {
+            setCount(count - 1);
+        }
+    }
+    const handleClick2 = () => {
+        setCount(count + 1);
+    }
+    return (
+        <div className="row">
+            <div className="col-md-6 ">
+                <img src="image/cart-1.jpg" alt="" />
+                <i>Vegetable’s Package</i>
+            </div>
+            <div className="col-md-1 d-flex align-items-center">
+                <b>$55.00</b>
+            </div>
+            <div className="col-md-2 d-flex align-items-center">
+                <div className="list-btn d-flex">
+                    <div className="input-group w-75  flex-fill">
+                        <button className="btn btn-outline-secondary tru shadow-none " type="button" onClick={handleClick}>-</button>
+                        <input type="text" className="form-control text-center" id="count" value={count} />
+                        <button className="btn btn-outline-secondary cong shadow-none" type="button" onClick={handleClick2}>+</button>
+                    </div>
+                </div>
+
+            </div>
+            <div className="col-md-1 d-flex align-items-center">
+                <b>$110.00 </b>
+            </div>
+            <div className="col-md-2 d-flex align-items-center justify-content-center">
+                <a href="/"><i className="fa-solid fa-xmark" /></a>
+            </div>
+        </div>
+    )
+}
+
 function Cart(props) {
-    document.title="Cart";
+    document.title = "Cart";
     return (
         <section>
             <div className="container">
@@ -22,76 +63,9 @@ function Cart(props) {
                     <div className="col-md-2" />
                 </div>
                 <hr />
-                <div className="row">
-                    <div className="col-md-6 ">
-                        <img src="image/cart-1.jpg" alt="" />
-                        <i>Vegetable’s Package</i>
-                    </div>
-                    <div className="col-md-1 d-flex align-items-center">
-                        <b>$55.00</b>
-                    </div>
-                    <div className="col-md-2 d-flex align-items-center">
-                        <div className="list-btn d-flex">
-                            <div className="input-group w-75  flex-fill">
-                                <button className="btn btn-outline-secondary tru shadow-none " type="button" id="moins" onclick="minus1()">-</button>
-                                <input type="text" className="form-control text-center" defaultValue={2} id="count1" />
-                                <button className="btn btn-outline-secondary cong shadow-none" type="button" id="plus" onclick="plus1()">+</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-1 d-flex align-items-center">
-                        <b>$110.00 </b>
-                    </div>
-                    <div className="col-md-2 d-flex align-items-center justify-content-center">
-                        <a href="/"><i className="fa-solid fa-xmark" /></a>
-                    </div>
-                </div>
+                <Product />
                 <hr />
-                <div className="row">
-                    <div className="col-md-6 ">
-                        <img src="image/cart-1.jpg" alt="" />
-                        <i>Vegetable’s Package</i>
-                    </div>
-                    <div className="col-md-1 d-flex align-items-center">
-                        <b>$55.00</b>
-                    </div>
-                    <div className="col-md-2 d-flex align-items-center">
-                        <div className="list-btn d-flex">
-                            <div className="input-group w-75  flex-fill">
-                                <button className="btn btn-outline-secondary tru shadow-none " type="button" id="moins" onclick="minus1()">-</button>
-                                <input type="text" className="form-control text-center" defaultValue={2} id="count1" />
-                                <button className="btn btn-outline-secondary cong shadow-none" type="button" id="plus" onclick="plus1()">+</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-1 d-flex align-items-center">
-                        <b>$110.00 </b>
-                    </div>
-                    <div className="col-md-2 d-flex align-items-center justify-content-center"><a href="/"><i className="fa-solid fa-xmark" /></a></div>
-                </div>
-                <hr />
-                <div className="row">
-                    <div className="col-md-6 ">
-                        <img src="image/cart-2.jpg" alt="" />
-                        <i>Fresh Garden Vegetable</i>
-                    </div>
-                    <div className="col-md-1 d-flex align-items-center">
-                        <b>$39.00</b>
-                    </div>
-                    <div className="col-md-2 d-flex align-items-center">
-                        <div className="list-btn d-flex">
-                            <div className="input-group w-75  flex-fill">
-                                <button className="btn btn-outline-secondary tru shadow-none " type="button" id="moins" onclick="minus2()">-</button>
-                                <input type="text" className="form-control text-center" defaultValue={1} id="count2" />
-                                <button className="btn btn-outline-secondary cong shadow-none" type="button" id="plus" onclick="plus2()">+</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-1 d-flex align-items-center">
-                        <b>$39.99</b>
-                    </div>
-                    <div className="col-md-2 d-flex align-items-center justify-content-center"><a href="/"><i className="fa-solid fa-xmark" /></a></div>
-                </div>
+                <Product />
                 <hr />
                 <div className="btn-cart d-flex justify-content-between my-4">
                     <a href="/">COUNTINUE SHOPPING</a>

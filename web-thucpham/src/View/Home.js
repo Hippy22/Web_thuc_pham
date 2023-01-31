@@ -16,7 +16,7 @@ function Component2(props) {
             <div className={"col-md-7 " + props.order}>
                 <img src={`image/${props.image}`} alt='' width='100%' />
             </div>
-            <div className="col-md-5">
+            <div className="col-md-5" >
                 <h4>{props.title}</h4>
                 <h3>{props.content}</h3>
                 <p>At vero eos et accusamus et iusto odio
@@ -28,10 +28,10 @@ function Component2(props) {
     );
 }
 function Home(props) {
-    document.title="Home";
+    document.title = "Home";
     return (
         <div>
-            <div className="banner  my-md-5 container " data-aos="fade-up" data-aos-duration={3000}>
+            <div className="banner  my-md-5 container " data-aos="fade-up" data-aos-duration={10000}>
                 <div className="row">
                     <div className="content-banner col-md-5">
                         <a href="/">More than Faster <img src="image/image.png" alt='' /></a>
@@ -56,7 +56,7 @@ function Home(props) {
                     <h3><b>Fruit And Vegetable Delivered</b></h3>
                     <h3><b>To Your Home</b></h3>
                 </div>
-                <div className="layout-card-serve d-flex justify-content-center gap-5 flex-wrap h-auto">
+                <div className="layout-card-serve d-flex justify-content-center gap-5 flex-wrap h-auto" data-aos="fade-up-right">
                     <Service name='Free Shipping'
                         content='Enjoy Order in a hand using the fresness of groceries'
                         image="car.png"
